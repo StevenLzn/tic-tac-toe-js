@@ -1,0 +1,31 @@
+.game-container {
+    border-collapse: collapse;
+    width: 15%;
+    height: 195px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.cell {
+    border: 5px solid gray;
+}
+
+tr:first-child .cell {
+    border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+tr:last-child .cell {
+    border-bottom: none;
+}
+
+
+
+
