@@ -6,8 +6,14 @@
     font-size: 35px;
 }
 
+tr {
+    height: 65px;
+}
+
 .cell {
+    width: 33%;
     border: 5px solid gray;
+    cursor: default;
 }
 
 tr:first-child .cell {
