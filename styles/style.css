@@ -32,6 +32,12 @@ tr:last-child .cell {
     border-bottom: none;
 }
 
+.winner {
+    background: green;
+}
 
+.actual-turn {
+    border-bottom: 1px yellow solid;
+}
 
 
