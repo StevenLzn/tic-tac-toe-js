@@ -19,19 +19,17 @@ function startGame() {
         cells[i].addEventListener('click', clickCell);
         cells[i].param = i;
     }
+
+    playerY.classList.remove('hidden');
+    playerX.classList.remove('show-100');
+    playerX.classList.remove('winner');
+    playerX.classList.add('actual-turn');
+    playerX.innerHTML = 'Turno X';
+    playerY.innerHTML = 'Turno O';
+
     turnX = true;
     cellsX = [];
     cellsO = [];
-
-    if (turnX) {
-        playerX.classList.remove('winner');
-        playerY.classList.remove('actual-turn');
-        playerX.classList.add('actual-turn');
-    } else {
-        playerY.classList.remove('winner');
-        playerX.classList.remove('actual-turn');
-        playerY.classList.add('actual-turn');
-    }
 }
 
 function clickCell(e) {
@@ -69,6 +67,14 @@ function clickCell(e) {
 
     }
 
+    if (cellsO.length + cellsX.length == 9) {
+        playerX.innerHTML = 'Empate';
+        playerX.classList.add('actual-turn');
+        playerX.classList.add('show-100');
+        playerY.classList.add('hidden');
+        return;
+    };
+
     turnX = !turnX;
 
     if (turnX) {
@@ -87,11 +93,15 @@ function winGame() {
     }
 
     if (turnX) {
-        playerX.classList.add('winner');
-        playerX.classList.remove('actual-turn');
+        playerX.innerHTML = 'Ganador X';
     } else {
-        playerY.classList.add('winner');
-        playerY.classList.remove('actual-turn');
+        playerX.innerHTML = 'Ganador O';
     }
+
+    playerX.classList.add('winner');
+    playerY.classList.remove('actual-turn');
+    playerX.classList.remove('actual-turn');
+    playerX.classList.add('show-100');
+    playerY.classList.add('hidden');
 
 }

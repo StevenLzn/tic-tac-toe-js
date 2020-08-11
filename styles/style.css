@@ -1,7 +1,41 @@
+.game-header {
+    width: 30%;
+    margin: auto;
+}
+
+.player-x, 
+.player-y {
+    display: inline-block;
+    width: 44.8%;
+    border: 1px #616161 solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: .5%;
+    padding: 2%;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.restart-game-button{
+    display: block;
+    width: 30%;
+    margin: auto;
+    padding: 1%;
+    background: #6BBAF4;
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
 .game-container {
     border-collapse: collapse;
-    width: 15%;
-    height: 195px;
+    width: 17%;
+    height: 221px;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 1%;
     text-align: center;
     font-size: 35px;
 }
@@ -33,11 +67,22 @@ tr:last-child .cell {
 }
 
 .winner {
-    background: green;
+    background: #4AC107;
+    border-bottom: 4px #308700 solid;
+    box-shadow: 0 4px 5px rgba(0,0,0,.16);
 }
 
 .actual-turn {
-    border-bottom: 1px yellow solid;
+    background: #B7DEFA;
+    border-bottom: 4px #1B98F3 solid;
+    box-shadow: 0 4px 5px rgba(0,0,0,.16);
 }
 
+.show-100 {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
 
